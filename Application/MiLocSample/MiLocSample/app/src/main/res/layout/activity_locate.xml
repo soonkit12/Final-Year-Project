@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.hetnet.milocsample.LocateActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tool_bar" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:layout_below="@id/tool_bar"
+        android:gravity="center"
+        android:id="@+id/name" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/timestamp" />
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/name"
+        android:layout_above="@id/timestamp"
+        class="com.hetnet.milocsample.ScaleImageView"
+        app:normalPointSrc="@drawable/green_dot"
+        app:selectPointSrc="@drawable/red_dot"
+        app:maxScale="6"
+        android:id="@+id/map" />
+
+    <TextView android:id="@+id/noLocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:gravity="center"
+        android:text="@string/no_location"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    </RelativeLayout>
+

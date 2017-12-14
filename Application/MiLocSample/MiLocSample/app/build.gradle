@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    defaultConfig {
+        applicationId "com.hetnet.milocsample"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-releases/"
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile(name: 'miloc.core', ext: 'aar')
+    compile(name: 'miloc.plugin.ble', ext: 'aar')
+    compile(name: 'miloc.plugin.sqlite', ext: 'aar')
+    compile(name: 'miloclib', ext: 'aar')
+    compile(name: 'utility.core', ext: 'aar')
+    compile(name: 'utility.plugin.license3j', ext: 'aar')
+    compile(name: 'miloc.plugin.alvin', ext: 'aar')
+    compile(name: 'miloc.plugin.faiz', ext: 'aar')
+    compile('org.eclipse.paho:org.eclipse.paho.android.service:1.0.2') {
+        exclude module: 'support-v4'
+    }
+
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+}
+
+

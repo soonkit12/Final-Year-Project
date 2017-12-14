@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_connection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.hetnet.milocsample.connection"
+    tools:showIn="@layout/activity_connection">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText1"
+        android:text="Server IP"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/button1" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        android:id="@+id/imageButton2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="publish"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Enter Your Name"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/editText1"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/button2" />
+
+    <Button
+        android:text="Disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="pub1"
+        android:textSize="10sp"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/button1"
+        android:layout_toEndOf="@+id/editText1" />
+
+    <Button
+        android:text="Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:onClick="pub"
+        android:textSize="10sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/editText1" />
+
+    <Button
+        android:text="Unsubscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:onClick="sub2"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="10sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignTop="@+id/button3" />
+
+    <Button
+        android:text="Subscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:onClick="sub1"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="10sp"
+        android:layout_toStartOf="@+id/button4"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignTop="@+id/editText3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_marginStart="38dp"
+        android:textSize="12sp"
+        android:layout_below="@+id/editText2"
+        android:layout_toEndOf="@+id/textView5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Topic"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/button3" />
+
+    <TextView
+        android:text="Status :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/imageButton1"
+        android:layout_alignTop="@+id/imageButton1" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        android:id="@+id/imageButton1"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/imageButton2" />
+
+    <ListView
+        android:id ="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button4"
+        android:layout_above="@+id/imageButton2" />
+
+</RelativeLayout>

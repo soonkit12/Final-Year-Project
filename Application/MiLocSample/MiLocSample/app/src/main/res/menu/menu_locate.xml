@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hetnet.miloc.LocateActivity">
+    <item android:id="@+id/action_me" android:title="@string/action_me"
+        app:showAsAction="ifRoom" android:icon="@drawable/ic_my_location_white_24dp" />
+    <item android:id="@+id/action_profile" android:title="@string/action_profile"
+        app:showAsAction="ifRoom" android:icon="@drawable/ic_map_white_24dp" />
+
+    <item android:id="@+id/action_refresh"
+        android:title= "Refresh"
+        app:showAsAction="never" />
+
+    <item android:title="Chat"
+        android:id="@+id/action_mqtt"
+        app:showAsAction="never" />
+
+
+</menu>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Positioning</string>
+
+    <string name="title_activity_locate">Positioning</string>
+    <string name="format_timestamp">MMM dd, HH:mm:ss.SSS</string>
+    <string name="action_me">Me</string>
+    <string name="action_profile">Switch profile</string>
+    <string name="no_location">Cannot detect your location</string>
+    <string name="error_title_license">License error</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_subpub">subpub</string>
+    <string name="title_activity_connection">connection</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+</resources>
